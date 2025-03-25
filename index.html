@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☑️ Task Completion Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Completion Calculator</h1>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="completion-count">Completion Count</button>
+                <button class="tab-btn" data-tab="time-until-completion">Time Until Completion</button>
+            </div>
+        </header>
+
+        <main>
+            <div id="completion-count" class="tab-content active">
+                <h2>Calculate How Many Tasks You Can Complete</h2>
+                <div class="input-group">
+                    <label for="total-time">Total Time Available:</label>
+                    <input type="text" id="total-time" placeholder="e.g. 1h 30m">
+                </div>
+                <div class="input-group">
+                    <label for="task-time-cc">Average Time per Task:</label>
+                    <input type="text" id="task-time-cc" placeholder="e.g. 1m 5s">
+                </div>
+                <div class="input-group">
+                    <label for="deviation-cc">Deviation from Average:</label>
+                    <input type="text" id="deviation-cc" placeholder="e.g. 10s">
+                </div>
+                <div class="results">
+                    <h3>Results:</h3>
+                    <p>Lower estimate: <span id="lower-cc" class="result-value">--</span> tasks</p>
+                    <p>Expected: <span id="expected-cc" class="result-value">--</span> tasks</p>
+                    <p>Higher estimate: <span id="higher-cc" class="result-value">--</span> tasks</p>
+                </div>
+            </div>
+
+            <div id="time-until-completion" class="tab-content">
+                <h2>Calculate Time Needed to Complete Tasks</h2>
+                <div class="input-group">
+                    <label for="task-count">Number of Tasks:</label>
+                    <input type="number" id="task-count" placeholder="e.g. 100">
+                </div>
+                <div class="input-group">
+                    <label for="task-time-tuc">Average Time per Task:</label>
+                    <input type="text" id="task-time-tuc" placeholder="e.g. 1m 5s">
+                </div>
+                <div class="input-group">
+                    <label for="deviation-tuc">Deviation from Average:</label>
+                    <input type="text" id="deviation-tuc" placeholder="e.g. 10s">
+                </div>
+                <div class="results">
+                    <h3>Results:</h3>
+                    <p>Lower estimate: <span id="lower-tuc" class="result-value">--</span></p>
+                    <p>Expected: <span id="expected-tuc" class="result-value">--</span></p>
+                    <p>Higher estimate: <span id="higher-tuc" class="result-value">--</span></p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
